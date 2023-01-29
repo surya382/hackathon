@@ -29,11 +29,26 @@ body {
   flex-direction: column;
 }
 
+.inp{
+
+  height: 300px;
+  transition-property: width height;
+transition-duration: 1s;
+transition-delay: 1ms;
+
+}
+
+.inp:hover{
+ 
+  width:35%;
+  height: 320px;
+  
+}
 .inp input{
   
   height: 40px;
   
-  border: 2px solid #e97122;
+  border: 2px solid #38E54D;
   border-radius: 5px;
   padding: 5px;
   font-size: 16px;
@@ -41,7 +56,7 @@ body {
 }
 
 .inp input:hover{
-  border: 2px solid #e97122;
+  border: 2px solid #38E54D;
 
 }
 
@@ -49,6 +64,8 @@ body {
   font-size: 1.5rem;
   margin-bottom: 5px;
 }
+
+
 
 @media only screen and (max-width: 600px) {
   .inp p{
@@ -61,19 +78,22 @@ body {
 .disbut{
  
   color: #fff;
-background-color: #e97122;
+background-color: #38E54D;
 padding: 10px;
 border-radius: 5px;
 width: 100%;
 font-weight: bolder;
 
+/* transition-property: width;
+transition-duration: 1s;
+transition-delay: 1ms; */
 
 
 }
 .disbut:hover{
   
 color: #fff;
-background-color: #e97122;
+background-color: #38E54D;
 
 
 
@@ -125,7 +145,7 @@ background-color: #e97122;
 .chat-window .chat-header {
   height: 45px;
   border-radius: 6px;
-  background: #e97122;
+  background: #38E54D;
   position: relative;
   cursor: pointer;
 }
@@ -254,11 +274,11 @@ background-color: #e97122;
 }
 
 .chat-window .chat-footer button{
-  color: #da8d5a;
+  color: #9dcaa3;
   
 }
 .chat-window .chat-footer button:hover {
-  color: #dd6515
+  color: #38E54D
 }
 .hide {
   opacity: 0 !important;

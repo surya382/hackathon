@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { TbSend } from "react-icons/tb";
+import ting from "../audioclips/ting.mp3"
 
 function Chat({ socket, username, room }) {
   const [currentMessage, setCurrentMessage] = useState("");
   const [messageList, setMessageList] = useState([]);
+
+
+
 
   const sendMessage = async () => {
     if (currentMessage !== "") {
@@ -27,6 +31,8 @@ function Chat({ socket, username, room }) {
   useEffect(() => {
     socket.on("receive_message", (data) => {
       setMessageList((list) => [...list, data]);
+      new Audio(ting).play()
+
     });
   }, [socket]);
 

@@ -4,7 +4,7 @@ import { useState } from "react";
 import {Box,Heading,Text,Input,Button} from "@chakra-ui/react"
 import Chat from "./components/Chat";
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("https://chat-lyyu.onrender.com");
 
 function App() {
   const [username, setUsername] = useState("");
@@ -23,7 +23,7 @@ function App() {
       {!showChat ? (
         <Box width="100%" m="auto"  className="joinChatContainer" >
           <Heading size={{lg:"3xl",base:"xl"}} m="auto" textAlign="center">"Get connected to your helping hands"</Heading>
-          <Box className="inp" p={5} border="1px solid #e97122" borderRadius="10px" width={{lg:"30%",base:"100%"}}  m="auto" >
+          <Box className="inp" p={5} border="1px solid #38E54D" borderRadius="10px" width={{lg:"30%",base:"100%"}}  m="auto" >
 
           <Text>Enter your username</Text>
           <Input
@@ -33,7 +33,7 @@ function App() {
               setUsername(event.target.value);
             }}
           />.
-           <Text>Enter the room id sent to your mail</Text>
+           <Text>Enter the room id </Text>
           <Input
             type="text"
             placeholder="Room ID..."
